@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="sr-text" href="#main-content">Skip to content</a>
 
     <div class="wrapper">
         <header>
@@ -62,32 +62,72 @@
                     </ul>
                 </div><!-- END OF SOCIAL NAV -->
             </nav>
+
+            <a href="#mobile-nav" id="mobile-toggle" class="mobile-nav-toggle" aria-label="Opens Site Navigation">
+                <span class="sr-text">Open Site Navigation</span>
+                <span class="fa fa-bars" aria-hidden="true"></span>
+            </a>
+
+            <nav>
+                <div class="mobile-nav" id="mobile-nav" class="mobile-nav" aria-label="Site Navigation">
+                    <a href="#mobile-nav-toggle" id="mobile-nav-close" class="nav-close" aria-label="Close Site Navigation">
+                        <span class="sr-text">Close Site Navigation</span>
+                        <span class="far fa-window-close" aria-hidden="true"></span>
+                    </a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span class="visuallyhidden">Instagram (opens a new window)</span>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                                <span class="visuallyhidden">Facebook (opens a new window)</span>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-snapchat-ghost" aria-hidden="true"></i>
+                                <span class="visuallyhidden">Snapchat (opens a new window)</span>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                                <span class="visuallyhidden">Twitter (opens a new window)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- END OF MOBILE NAV -->
+            </nav>
+            <a href="#mobile-nav-toggle" class="backdrop" tabindex="-1" aria-hidden="true" hidden></a>
+
         </div><!-- END OF HEADER HERO -->
     </header>
 
-    <main id="content">
+    <main id="main-content" tabindex="-1">
 
         <div class="wrapper">
 
             <section class="content clearfix">
+                <div class="information-block-photo">
+                    <img src="./assets/optimized-image-2_2@2x.png" alt="Wall display of shoe styles">
+                </div>
                 <div class="information-block">
                     <h2>We specialize in:</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maxime voluptatum, unde asperiores eos facere magni quae cum aut animi tempore, enim vel. Omnis aliquam tempora laboriosam alias provident et. Magni ea quaerat dolorum nesciunt.</p>
                     <a href="#" class="read-more">Read More</a>
                 </div>
-                <div class="information-block-photo">
-                    <img src="./assets/optimized-image-2_2@2x.png" alt="Wall display of shoe styles">
-                </div>
             </section><!-- END OF SECTION ONE -->
 
             <section class="content clearfix">
+                <div class="information-block-photo reverse-photo">
+                    <img src="./assets/optimized-image-2-copy@2x.png" alt="Hightop white sneaker">
+                </div>
                 <div class="information-block reverse-block">
                     <h2>Foot Care</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maxime voluptatum, unde asperiores eos facere magni quae cum aut animi tempore, enim vel. Omnis aliquam tempora laboriosam alias provident et. Magni ea quaerat dolorum nesciunt.</p>
                     <a href="#" class="read-more">Read More</a>
-                </div>
-                <div class="information-block-photo reverse-photo">
-                    <img src="./assets/optimized-image-2-copy@2x.png" alt="Hightop white sneaker">
                 </div>
             </section><!-- END OF SECTION TWO -->
 
@@ -98,7 +138,7 @@
                     </div>
                     <div class="giving-back-information">
                         <h2>Giving Back</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maxime voluptatum, unde asperiores eos facere magni quae cum aut animi tempore, enim vel. Omnis aliquam tempora laboriosam alias provident et.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur maxime voluptatum, unde asperiores eos facere magni quae cum aut animi tempore, enim vel. Omnis aliquam tempora laboriosam alias provident et. Eos facere magni quae cum aut animi tempore, enim vel. Omnis aliquam tempora laboriosam alias provident et.  </p>
                         <a href="#" class="read-more">Read More</a>
                     </div>
                 </div>
@@ -111,10 +151,10 @@
                             <a href="#" target="_blank"><span class="links-icon"><i class="fas fa-shopping-bag"></i></span>Products</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"><span class="links-icon"><i class="fas fa-users"></i></span>Community</a>
+                            <a href="#" target="_blank"><span class="links-icon mobile-icon"><i class="fas fa-users"></i></span>Community</a>
                         </li>
                         <li>
-                            <a href="#" target="_blank"><span class="links-icon"><i class="fas fa-phone"></i></span>Reach Out</a>
+                            <a href="#" target="_blank"><span class="links-icon mobile-icon"><i class="fas fa-phone"></i></span>Reach Out</a>
                         </li>
                     </ul>
                 </div><!-- END OF LINKS -->
@@ -149,7 +189,7 @@
                         </img>
                     </figure>
 
-                    <figure class="the-gram-photo">
+                    <figure class="the-gram-photo mobile-sizing">
                         <img src="./assets/optimized-image-4@2x.png" alt="All white sneaker held in a hand">
                         <figcaption>
                             All white is a mood
@@ -160,13 +200,19 @@
                         </figcaption>
                         </img>
                     </figure>
-                    
-                    <div class="the-gram-photo">
-                        
-                    </div>
-                    <div class="the-gram-photo">
-                        
-                    </div>
+
+                    <figure class="the-gram-photo halfway-size">
+                        <img src="./assets/Optimized-image-6@2x.png" alt="View of person's white sneakers standing near a puddle">
+                        <figcaption>
+                            Where do your kicks take you?
+                            <a href="#" target="_blank">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span class="visuallyhidden">Instagram (opens a new window)</span>
+                            </a>
+                        </figcaption>
+                        </img>
+                    </figure>
+    
                 </div>
             </section><!-- END OF THE GRAM -->
         </div><!-- WRAPPER END -->
@@ -209,7 +255,15 @@
             </div><!-- END OF COPYRIGHT BLOCK-->
 
         </footer>
-    </div><!-- ENF OF WRAPPER -->
+    </div><!-- END OF WRAPPER -->
 </body>
 
 </html>
+
+<!-- 
+    PLAGIARISM NOTES - USED THIS; 
+    https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ 
+
+    AND
+
+    https://medium.com/@heyoka/responsive-pure-css-off-canvas-hamburger-menu-aebc8d11d793 (https://codepen.io/markcaron/pen/pPZVWO) -->
